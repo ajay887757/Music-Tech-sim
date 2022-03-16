@@ -1,0 +1,26 @@
+<center>
+    <h1> Edit college {{edit_detail.Name}}--{{edit_detail.clg.Name}} Detail</h1>
+    <form action=""  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <select name="cid">
+            {% for i in allcollege %}
+            {% if i.id == detail.clg.id %}
+             <option value="{{i.id}}" selected>{{i.Name}}</option>
+            {% else %}
+            <option value="{{i.id}}">{{i.Name}}</option>
+            {% endif %}
+            {% endfor %}
+        </select><br><br>
+    <input type="text" placeholder="Enter Name"value="{{detail.Name}}" required name="sname">
+    <br><br>
+    <input type="email" placeholder="Enter Gmail"value="{{detail.Gmail}}"  required name="em">
+    <br><br>
+    <input type="file" placeholder="Enter image url"value="{{detail.image.url}}"name="url1">
+    <br><br>
+    <input type="number" placeholder="Enter Mob"value="{{detail.Number}}" required name="mob">
+    <br><br>
+        <input type="text" placeholder="Enter Enrollments"value="{{detail.Enrollment}}" required name="enroll">
+    <br><br>
+    <input type="submit" value="Edit students">
+</form>
+ </center>

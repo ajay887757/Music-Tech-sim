@@ -1,0 +1,26 @@
+<center>
+   <marquee> <h1>Signup Account</h1>  </marquee>
+    {% if error %}
+    <p style="color:red;">Password Doesn't Match</p>
+    {% endif %}
+    {% if error2 %}
+    <script> alert("This user is already exist..")</script>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+         <input type="text" placeholder="First Name" required Name="f_name">
+        <br><br>
+         <input type="text" placeholder="last Name" required Name="l_name">
+        <br><br>
+         <input type="email" placeholder="email" required Name="email">
+        <br><br>
+        <input type="text" placeholder="Username" required title="Enter username" Name="user">
+        <br><br>
+        <input type="password" placeholder="password" required Name="pwd" maxlength="8">
+        <br><br>
+        <input type="password" placeholder="conform password" required Name="cpwd" maxlength="8">
+        <br><br>
+        <input type="submit" value="Signup" placeholder="Signup ">
+        <br><br>
+    </form>
+</center>

@@ -1,0 +1,23 @@
+<center> Forget your account
+    {% if error %}
+    <p style="color:red;">user Doesn't Match</p>
+    {% endif %}
+    {% if form %}
+ <form action="" method="post">
+        {% csrf_token %}
+        <input type="password" placeholder=" Enter your password" required title="Enter password" Name="pwd">
+        <br><br>
+     <input type="hidden" value="{{udata.id}}"name="idd">
+      <input type="password" placeholder=" Enter your conform password" required title="Enter conform password password" Name="cpwd">
+        <br><br>
+        <input type="submit" name="form" value="submit pwd">
+    </form>
+    {% else %}
+    <form action="" method="post">
+    {% csrf_token %}
+        <input type="email" placeholder=" Enter your email" required title="Enter email" Name="em">
+        <br><br>
+        <input type="submit" name="form" value="submit email">
+    </form>
+    {% endif %}
+    </center>

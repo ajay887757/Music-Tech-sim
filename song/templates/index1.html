@@ -1,0 +1,59 @@
+<a href="{% url 'Logout' %}" style="float:right"><button>Logout</button></a>
+<center>
+
+<h1 style="color:skyblue"> Welcome</h1>
+    <h2>welcome {{request.user.first_name}}</h2>
+    </center>
+<center><i><b><p style="...">By:-Ajay kumar mandal</p> </b></i>
+<i><b><p style="...">contact:-8877576499</p> </b></i></center>
+<br>
+<hr>
+<marquee scrolldlye="10">
+<center><h1>Students list is</h1></center></marquee>
+<hr>
+{% for i in Hello %}
+<li><a href="{% url 'Detail' i.id  %}"> Name-{{i.Name}}</a></li>
+{% endfor %}
+<hr>
+{% if request.user.is_staff %}
+<center>
+<a href="{% url 'Add_student' %}" target="_blank"><button>Add students list</button></a>
+<br><br>
+    {% endif %}
+</center>
+<hr>
+<center><h1>college list is</h1></center>
+<hr>
+{% for j in key2 %}
+<li> Name-{{j.Name}}</li>
+<li> contact-{{j.contact}}</li>
+<li> Address-{{j.Address}}</li>
+<hr>
+<center>
+    <a href="{% url 'delete_college' j.id %}"><button>delete students</button></a>
+<a href="{% url 'edit_college' j.id %}"><button> Edit college</button></a>
+<hr></center>
+{% endfor %}
+<center>
+<hr>
+<a href="{% url 'Add_college' %}"><button>Add college</button></a>
+<hr></center>
+
+
+<center>
+<br>
+    <a href="{% url 'piyush' %}"><button style="background-color:red">Page2</button></a>
+    <br>
+    <a href="{% url 'amit' %}"><button style="color:red">Page3</button></a>
+    <br>
+    <a href="http://127.0.0.1:8000/admin/" target="_blank"><button style="color:red">Login page goto.....</button></a>
+<hr>
+
+<a href="https://www.youtube.com/watch?v=Vk3DwEcy_70" target="_blank">Open YouTube</a>
+<a href ="{% url 'operations' %}"> <button >Calculator</button></a>
+
+
+
+
+
+</center>

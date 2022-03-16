@@ -1,0 +1,23 @@
+{% load static %}
+<center style="color:red">
+<marquee>
+    <h1>Students list</h1></marquee>
+<hr>
+    college={{stu.clg}}<br>
+  Name-   {{stu.Name}}<br>
+  Gmail-  {{stu.Gmail}}<br>
+  Number-  {{stu.Number}}<br>
+    {% if stu.image %}
+    image-<img src="{{stu.image.url1}}"width="200",height="300">
+    {% else %}
+    <h1> NO image</h1>
+    {% endif %}
+  <center>
+      <hr>
+<marquee>
+    <img src="{% static 'ajay.jpg' %}" width="200",height="'300">
+</marquee>
+  <a href="{% url 'delete' stu.id %}"><button>delete students</button></a>
+      <a href="{% url 'edit_student' stu.id %}"><button>Edit students</button></a>
+  </center>
+</center>

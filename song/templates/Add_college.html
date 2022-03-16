@@ -1,0 +1,14 @@
+<center>
+    <h1> Add New College</h1>
+    <form action=""  method="post">
+        {% csrf_token %}
+        <br><br>
+    <input type="text" placeholder="Enter college Name" required name="cname">
+    <br><br>
+    <input type="text" placeholder="Enter college Address" required name="Add">
+    <br><br>
+    <input type="number" placeholder="Enter Mob" required name="cmob">
+    <br><br>
+    <input type="submit" value="Add College">
+</form>
+ </center>

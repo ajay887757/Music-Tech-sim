@@ -1,0 +1,17 @@
+<center>
+   <marquee> <h1>Login Your Account</h1>  </marquee>
+    {% if error %}
+    <h1 style="color:red;"> User and Password invalid</h1>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Username" required title="Enter username" Name="user">
+        <br><br>
+        <input type="password" placeholder="password" required Name="pwd">
+        <br><br>
+        <input type="submit" value="Login" placeholder="Submit ">
+        <br><br>
+    </form>
+    <a href="{% url 'signup' %}"><button>Signup</button></a>
+    <a href="{% url 'forget' %}"><button>forget password</button></a>
+</center>

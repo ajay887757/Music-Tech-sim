@@ -1,0 +1,14 @@
+<center>
+    <h1> Edit {{detail.clg.Name}} Detail</h1>
+    <form action=""  method="post">
+        {% csrf_token %}
+
+    <input type="text" placeholder="Enter New college Name"value="{{detail.Name}}" required name="cname">
+    <br><br>
+    <input type="number" placeholder="Enter New contact"value="{{detail.contact}}" required name="cmob">
+    <br><br>
+        <input type="text" placeholder="Enter New Address"value="{{detail.Address}}" required name="Add">
+    <br><br>
+    <input type="submit" value="Edit college">
+</form>
+ </center>
